@@ -1,0 +1,10 @@
+SELECT
+    c.id,
+    c.name,
+    p.parent_name
+FROM
+    m_customer c
+LEFT JOIN
+    m_parent p ON p.id = c.parent_id
+GROUP BY
+    c.id
